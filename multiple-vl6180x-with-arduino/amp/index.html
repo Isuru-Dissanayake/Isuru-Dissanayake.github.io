@@ -28,7 +28,7 @@ communicate with mul">
     <meta property="og:url" content="http://localhost:2368/multiple-vl6180x-with-arduino/">
     <meta property="og:image" content="http://localhost:2368/content/images/2019/08/Screenshot--5-.png">
     <meta property="article:published_time" content="2019-08-03T17:11:09.000Z">
-    <meta property="article:modified_time" content="2019-08-03T18:26:54.000Z">
+    <meta property="article:modified_time" content="2019-08-03T19:05:58.000Z">
     <meta property="article:tag" content="code">
     
     <meta property="article:publisher" content="https://www.facebook.com/isuru.dissanayake.161">
@@ -84,7 +84,7 @@ communicate with mul">
     "headline": "Multiple VL6180X(Pololu) with Arduino",
     "url": "http://localhost:2368/multiple-vl6180x-with-arduino/",
     "datePublished": "2019-08-03T17:11:09.000Z",
-    "dateModified": "2019-08-03T18:26:54.000Z",
+    "dateModified": "2019-08-03T19:05:58.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2368/content/images/2019/08/Screenshot--5-.png",
@@ -141,7 +141,7 @@ GND &gt; GND<br>
 SDA &gt; SDA<br>
 SCL &gt; SCL<br>
 GPIO0 &gt; Any digital/analog pin</p>
-<p>SDA and SCL are common for all the sensors. But GPIO0 should be connected individually to the Arduino board. Here, we will be using 5 VL6180X sensors with a Arduino Uno. </p><p><strong>Now, the problem is how to unique addresses for these 5 sensors</strong>. VL6180X sensors by Pololu have this pin called GPIO0 and here we will be using this pin to make the sensors hardware stand-by(usually other sensor manufacturers name this pin as XSHUT). By default GPIO0 is at VDD voltage level(HIGH). By making this pin LOW we can put the sensor to stand-by mode. </p><figure class="kg-card kg-image-card"></figure><p>To write addresses to all the five sensors, first by making all the 5 GPIO0 pins LOW, we put sensors into stand-by mode. After that, by making each pin HIGH one by one we can write I2C addresses to the sensors(here the addresses are 43,44,45,46,47).</p>
+<p>SDA and SCL are common for all the sensors. But GPIO0 should be connected individually to the Arduino board. Here, we will be using 5 VL6180X sensors with a Arduino Uno. </p><p><strong>Now, the problem is how to unique addresses for these 5 sensors</strong>. VL6180X sensors by Pololu have this pin called GPIO0 and here we will be using this pin to make the sensors hardware stand-by(usually other sensor manufacturers name this pin as XSHUT). By default GPIO0 is at VDD voltage level(HIGH). By making this pin LOW we can put the sensor to stand-by mode. </p><figure class="kg-card kg-image-card"></figure><p>To write addresses to all the five sensors, first by making all the 5 GPIO0 pins LOW, we put sensors into stand-by mode. After that, by making each pin HIGH one by one we can write I2C addresses to the sensors(here the addresses are 43,44,45,46,47). After setting all the addresses, we can get data from all the sensors without any interruption.</p><p>For full code visit <a href="https://github.com/Isuru-Dissanayake/piccola/tree/master/code">this</a>. </p><p>See you next time!</p>
 
             </section>
 

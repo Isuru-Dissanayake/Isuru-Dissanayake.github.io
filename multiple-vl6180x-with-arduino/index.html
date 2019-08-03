@@ -21,11 +21,18 @@
     <meta property="og:description" content="VL6180X by Pololu is a great sensor module if you need accurate distance
 measurements for your robots. Specially, if you requirement is within 10mm -
 200mm. However, interfacing multiple VL6180X sensors with Arduino is not
-straightforward.">
+straightforward.
+
+
+--------------------------------------------------------------------------------
+
+In these VL6180x modules, the communication protocol is I2C. The advantage of
+having such a communication protocol is, we can use same communication bus to
+communicate with mul">
     <meta property="og:url" content="http://localhost:2368/multiple-vl6180x-with-arduino/">
     <meta property="og:image" content="http://localhost:2368/content/images/2019/08/Screenshot--5-.png">
     <meta property="article:published_time" content="2019-08-03T17:11:09.000Z">
-    <meta property="article:modified_time" content="2019-08-03T17:19:00.000Z">
+    <meta property="article:modified_time" content="2019-08-03T18:26:54.000Z">
     <meta property="article:tag" content="code">
     
     <meta property="article:publisher" content="https://www.facebook.com/isuru.dissanayake.161">
@@ -34,7 +41,14 @@ straightforward.">
     <meta name="twitter:description" content="VL6180X by Pololu is a great sensor module if you need accurate distance
 measurements for your robots. Specially, if you requirement is within 10mm -
 200mm. However, interfacing multiple VL6180X sensors with Arduino is not
-straightforward.">
+straightforward.
+
+
+--------------------------------------------------------------------------------
+
+In these VL6180x modules, the communication protocol is I2C. The advantage of
+having such a communication protocol is, we can use same communication bus to
+communicate with mul">
     <meta name="twitter:url" content="http://localhost:2368/multiple-vl6180x-with-arduino/">
     <meta name="twitter:image" content="http://localhost:2368/content/images/2019/08/Screenshot--5-.png">
     <meta name="twitter:label1" content="Written by">
@@ -74,7 +88,7 @@ straightforward.">
     "headline": "Multiple VL6180X(Pololu) with Arduino",
     "url": "http://localhost:2368/multiple-vl6180x-with-arduino/",
     "datePublished": "2019-08-03T17:11:09.000Z",
-    "dateModified": "2019-08-03T17:19:00.000Z",
+    "dateModified": "2019-08-03T18:26:54.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2368/content/images/2019/08/Screenshot--5-.png",
@@ -82,7 +96,7 @@ straightforward.">
         "height": 761
     },
     "keywords": "code",
-    "description": "VL6180X by Pololu is a great sensor module if you need accurate distance\nmeasurements for your robots. Specially, if you requirement is within 10mm -\n200mm. However, interfacing multiple VL6180X sensors with Arduino is not\nstraightforward.",
+    "description": "VL6180X by Pololu is a great sensor module if you need accurate distance\nmeasurements for your robots. Specially, if you requirement is within 10mm -\n200mm. However, interfacing multiple VL6180X sensors with Arduino is not\nstraightforward.\n\n\n--------------------------------------------------------------------------------\n\nIn these VL6180x modules, the communication protocol is I2C. The advantage of\nhaving such a communication protocol is, we can use same communication bus to\ncommunicate with mul",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -160,7 +174,13 @@ straightforward.">
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <p>VL6180X by Pololu is a great sensor module if you need accurate distance measurements for your robots. Specially, if you requirement is within 10mm - 200mm. However, interfacing multiple VL6180X sensors with Arduino is not straightforward.</p>
+                    <p>VL6180X by Pololu is a great sensor module if you need accurate distance measurements for your robots. Specially, if you requirement is within 10mm - 200mm. However, interfacing multiple VL6180X sensors with Arduino is not straightforward.</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><p>In these VL6180x modules, the communication protocol is I2C. The advantage of having such a communication protocol is, we can use same communication bus to communicate with multiple modules. On the other hand, to successfully communicate with multiple modules, first we need to identify those modules individually. To do that, we use unique addresses for each of the modules. After that, by referring to that unique address we can communicate with multiple modules without any interruption.</p><!--kg-card-begin: gallery--><figure class="kg-card kg-gallery-card kg-width-wide kg-card-hascaption"><div class="kg-gallery-container"><div class="kg-gallery-row"><div class="kg-gallery-image"><img src="../content/images/2019/08/Capture-1.PNG" width="782" height="450"></div><div class="kg-gallery-image"><img src="../content/images/2019/08/Capture1.PNG" width="1429" height="737"></div></div></div><figcaption>source : <a href="https://www.pololu.com/product/2489">Pololu</a></figcaption></figure><!--kg-card-end: gallery--><p>First, let's see how pins are connected with Arduino</p><!--kg-card-begin: markdown--><p>VL6180X &gt; Arduino<br>
+VIN &gt; 5v<br>
+GND &gt; GND<br>
+SDA &gt; SDA<br>
+SCL &gt; SCL<br>
+GPIO0 &gt; Any digital/analog pin</p>
+<!--kg-card-end: markdown--><p>SDA and SCL are common for all the sensors. But GPIO0 should be connected individually to the Arduino board. Here, we will be using 5 VL6180X sensors with a Arduino Uno. </p><p><strong>Now, the problem is how to unique addresses for these 5 sensors</strong>. VL6180X sensors by Pololu have this pin called GPIO0 and here we will be using this pin to make the sensors hardware stand-by(usually other sensor manufacturers name this pin as XSHUT). By default GPIO0 is at VDD voltage level(HIGH). By making this pin LOW we can put the sensor to stand-by mode. </p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="../content/images/2019/08/Capture2.PNG" class="kg-image"></figure><!--kg-card-end: image--><p>To write addresses to all the five sensors, first by making all the 5 GPIO0 pins LOW, we put sensors into stand-by mode. After that, by making each pin HIGH one by one we can write I2C addresses to the sensors(here the addresses are 43,44,45,46,47).</p>
                 </div>
             </section>
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>STM32 - Brain of PICCOLA (micromouse part 01)</title>
+    <title>Multiple VL6180X(Pololu) with Arduino</title>
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,55 +17,33 @@
     
     <meta property="og:site_name" content="Isuru's Blog">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="STM32 - Brain of PICCOLA (micromouse part 01)">
-    <meta property="og:description" content="Team Piccola ! Four friend building a micro mouse called &quot;piccola&quot; for a
-interuniversity competition, ROBOFEST [http://www.robofest.lk/]. Wanna build a
-Piccola ?
-
-Robofest 2019 web page coverWhen we first started to build a micro mouse, the
-main concern was to find a suitable micro-controller. There were few features
-that we looked for when selecting a micro-controller.
-
- 1. Physical size
- 2. Memory
- 3. Number of GPIO pins
- 4. Speed
- 5. Easy to use
-
-To be honest, we couldn't find a micro-control">
-    <meta property="og:url" content="http://localhost:2368/stm32-brain-of-the-mouse-micromouse-part-01/">
-    <meta property="og:image" content="http://localhost:2368/content/images/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg">
-    <meta property="article:published_time" content="2019-08-02T14:01:49.000Z">
-    <meta property="article:modified_time" content="2019-08-02T16:02:13.000Z">
-    <meta property="article:tag" content="robotics">
+    <meta property="og:title" content="Multiple VL6180X(Pololu) with Arduino">
+    <meta property="og:description" content="VL6180X by Pololu is a great sensor module if you need accurate distance
+measurements for your robots. Specially, if you requirement is within 10mm -
+200mm. However, interfacing multiple VL6180X sensors with Arduino is not
+straightforward.">
+    <meta property="og:url" content="http://localhost:2368/multiple-vl6180x-with-arduino/">
+    <meta property="og:image" content="http://localhost:2368/content/images/2019/08/Screenshot--5-.png">
+    <meta property="article:published_time" content="2019-08-03T17:11:09.000Z">
+    <meta property="article:modified_time" content="2019-08-03T17:19:00.000Z">
+    <meta property="article:tag" content="code">
     
     <meta property="article:publisher" content="https://www.facebook.com/isuru.dissanayake.161">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="STM32 - Brain of PICCOLA (micromouse part 01)">
-    <meta name="twitter:description" content="Team Piccola ! Four friend building a micro mouse called &quot;piccola&quot; for a
-interuniversity competition, ROBOFEST [http://www.robofest.lk/]. Wanna build a
-Piccola ?
-
-Robofest 2019 web page coverWhen we first started to build a micro mouse, the
-main concern was to find a suitable micro-controller. There were few features
-that we looked for when selecting a micro-controller.
-
- 1. Physical size
- 2. Memory
- 3. Number of GPIO pins
- 4. Speed
- 5. Easy to use
-
-To be honest, we couldn't find a micro-control">
-    <meta name="twitter:url" content="http://localhost:2368/stm32-brain-of-the-mouse-micromouse-part-01/">
-    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg">
+    <meta name="twitter:title" content="Multiple VL6180X(Pololu) with Arduino">
+    <meta name="twitter:description" content="VL6180X by Pololu is a great sensor module if you need accurate distance
+measurements for your robots. Specially, if you requirement is within 10mm -
+200mm. However, interfacing multiple VL6180X sensors with Arduino is not
+straightforward.">
+    <meta name="twitter:url" content="http://localhost:2368/multiple-vl6180x-with-arduino/">
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2019/08/Screenshot--5-.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Isuru Dissanayake">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="robotics">
+    <meta name="twitter:data2" content="code">
     <meta name="twitter:site" content="@IsuruDi08077679">
-    <meta property="og:image:width" content="1000">
-    <meta property="og:image:height" content="667">
+    <meta property="og:image:width" content="1205">
+    <meta property="og:image:height" content="761">
     
     <script type="application/ld+json">
 {
@@ -93,18 +71,18 @@ To be honest, we couldn't find a micro-control">
         "url": "http://localhost:2368/author/isuru/",
         "sameAs": []
     },
-    "headline": "STM32 - Brain of PICCOLA (micromouse part 01)",
-    "url": "http://localhost:2368/stm32-brain-of-the-mouse-micromouse-part-01/",
-    "datePublished": "2019-08-02T14:01:49.000Z",
-    "dateModified": "2019-08-02T16:02:13.000Z",
+    "headline": "Multiple VL6180X(Pololu) with Arduino",
+    "url": "http://localhost:2368/multiple-vl6180x-with-arduino/",
+    "datePublished": "2019-08-03T17:11:09.000Z",
+    "dateModified": "2019-08-03T17:19:00.000Z",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:2368/content/images/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg",
-        "width": 1000,
-        "height": 667
+        "url": "http://localhost:2368/content/images/2019/08/Screenshot--5-.png",
+        "width": 1205,
+        "height": 761
     },
-    "keywords": "robotics",
-    "description": "Team Piccola ! Four friend building a micro mouse called &quot;piccola&quot; for a\ninteruniversity competition, ROBOFEST [http://www.robofest.lk/]. Wanna build a\nPiccola ?\n\nRobofest 2019 web page coverWhen we first started to build a micro mouse, the\nmain concern was to find a suitable micro-controller. There were few features\nthat we looked for when selecting a micro-controller.\n\n 1. Physical size\n 2. Memory\n 3. Number of GPIO pins\n 4. Speed\n 5. Easy to use\n\nTo be honest, we couldn&#x27;t find a micro-control",
+    "keywords": "code",
+    "description": "VL6180X by Pololu is a great sensor module if you need accurate distance\nmeasurements for your robots. Specially, if you requirement is within 10mm -\n200mm. However, interfacing multiple VL6180X sensors with Arduino is not\nstraightforward.",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368/"
@@ -125,7 +103,7 @@ To be honest, we couldn't find a micro-control">
 </script>
 
 </head>
-<body class="post-template tag-robotics">
+<body class="post-template tag-code">
 
     <div class="site-wrapper">
 
@@ -161,41 +139,28 @@ To be honest, we couldn't find a micro-control">
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full post tag-robotics featured ">
+        <article class="post-full post tag-code featured ">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="2019-08-02">2 August 2019</time>
-                        <span class="date-divider">/</span> <a href="../tag/robotics/">robotics</a>
+                    <time class="post-full-meta-date" datetime="2019-08-03">3 August 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/code/">code</a>
                 </section>
-                <h1 class="post-full-title">STM32 - Brain of PICCOLA (micromouse part 01)</h1>
+                <h1 class="post-full-title">Multiple VL6180X(Pololu) with Arduino</h1>
             </header>
 
             <figure class="post-full-image">
-                <img srcset="/content/images/size/w300/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg 300w,
-                            /content/images/size/w600/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg 600w,
-                            /content/images/size/w1000/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg 1000w,
-                            /content/images/size/w2000/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg 2000w" sizes="(max-width: 800px) 400px,
+                <img srcset="/content/images/size/w300/2019/08/Screenshot--5-.png 300w,
+                            /content/images/size/w600/2019/08/Screenshot--5-.png 600w,
+                            /content/images/size/w1000/2019/08/Screenshot--5-.png 1000w,
+                            /content/images/size/w2000/2019/08/Screenshot--5-.png 2000w" sizes="(max-width: 800px) 400px,
                             (max-width: 1170px) 700px,
-                            1400px" src="../content/images/size/w2000/2019/08/picture-of-ibm-watson-robot-brain-chip-photo.jpg" alt="STM32 - Brain of PICCOLA (micromouse part 01)">
+                            1400px" src="../content/images/size/w2000/2019/08/Screenshot--5-.png" alt="Multiple VL6180X(Pololu) with Arduino">
             </figure>
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <p>Team Piccola ! Four friend building a micro mouse called "piccola" for a interuniversity competition, <a href="http://www.robofest.lk/">ROBOFEST</a>. Wanna build a Piccola ?</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2019/08/Screenshot--3-.png" class="kg-image"><figcaption>Robofest 2019 web page cover</figcaption></figure><!--kg-card-end: image--><p>When we first started to build a micro mouse, the main concern was to find a suitable micro-controller. There were few features that we looked for when selecting a micro-controller.</p><!--kg-card-begin: markdown--><ol>
-<li>Physical size</li>
-<li>Memory</li>
-<li>Number of GPIO pins</li>
-<li>Speed</li>
-<li>Easy to use</li>
-</ol>
-<!--kg-card-end: markdown--><p>To be honest, we couldn't find a micro-controller which ticks all the boxes for us. But there were few micro-controller that we  found very useful in this case.</p><!--kg-card-begin: markdown--><ol>
-<li>STM32F103C8 - Blue pill</li>
-<li>Arduino pro mini</li>
-<li>Arduino Geniuno Uno</li>
-<li>Arduino nano</li>
-</ol>
-<!--kg-card-end: markdown--><p>In the Arduino boards that we found, there were few disadvantages when used in a micro mouse. Some were large in size(Arduino Uno), some didn't have enough GPIO pins(specially external interrupt pins ) and some didn't have enough memory to store the micro mouse maze solving algorithm. </p><p>After two three rounds of discussions in the team, we decided to use STM32 blue pill as the micro-controller. The initial concern was how to program this blue pill. Luckily, STM32 is programable trough the very familiar Arduino IDE. Overall STM32 is a good choice when compared with others. The small physical size and more GPIO pins are very valuable when building a micro mouse.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="../content/images/2019/08/stm32f103-pinout-diagram.png" class="kg-image"><figcaption>STM32F103C8 pin diagram</figcaption></figure><!--kg-card-end: image--><p>Since this is Arduino compatible, we can use all the libraries available for Arduino without any problem(STM32 programing will be talked in a separate post ).  </p><p>This is a series of posts where I'm trying to talk about building a micro mouse from scratch. If  there's something in this post unclear to you, please wait for the next set of posts or hit me up on the comments. </p>
+                    <p>VL6180X by Pololu is a great sensor module if you need accurate distance measurements for your robots. Specially, if you requirement is within 10mm - 200mm. However, interfacing multiple VL6180X sensors with Arduino is not straightforward.</p>
                 </div>
             </section>
 
@@ -255,22 +220,7 @@ To be honest, we couldn't find a micro-control">
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
-                <article class="read-next-card" style="background-image: url(/content/images/size/w600/2019/08/9021.jpg)">
-                    <header class="read-next-card-header">
-                        <small class="read-next-card-header-sitetitle">— Isuru's Blog —</small>
-                        <h3 class="read-next-card-header-title"><a href="../tag/robotics/">robotics</a></h3>
-                    </header>
-                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
-</div>
-                    <div class="read-next-card-content">
-                        <ul>
-                            <li><a href="../tof-vl6180x-micromouse-part-02/">ToF VL6180X - giving eyes to PICCOLA(micromouse part 02)</a></li>
-                        </ul>
-                    </div>
-                    <footer class="read-next-card-footer">
-                        <a href="../tag/robotics/">1 post →</a>
-                    </footer>
-                </article>
+
 
                 <article class="post-card post tag-robotics ">
 
@@ -319,52 +269,6 @@ To be honest, we couldn't find a micro-control">
 
 </article>
 
-                <article class="post-card post ">
-
-    <a class="post-card-image-link" href="../why-i-started-a-blog/">
-        <img class="post-card-image" srcset="/content/images/size/w300/2019/08/blog.jpg 300w,
-                    /content/images/size/w600/2019/08/blog.jpg 600w,
-                    /content/images/size/w1000/2019/08/blog.jpg 1000w,
-                    /content/images/size/w2000/2019/08/blog.jpg 2000w" sizes="(max-width: 1000px) 400px, 700px" src="../content/images/size/w600/2019/08/blog.jpg" alt="Why I started a blog ?">
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="../why-i-started-a-blog/">
-
-            <header class="post-card-header">
-                <h2 class="post-card-title">Why I started a blog ?</h2>
-            </header>
-
-            <section class="post-card-excerpt">
-                <p>Blogs !! Two months back, I was not interested in writing a blog. But, I definitely wanted to start a YouTube channel. However, still I couldn't shoot a single video.One day, after seeing</p>
-            </section>
-
-        </a>
-
-        <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        Isuru Dissanayake
-                    </div>
-
-                        <a href="../author/isuru/" class="static-avatar">
-                            <img class="author-profile-image" src="../content/images/size/w100/2019/08/IMG_20190507_132831_024.jpg" alt="Isuru Dissanayake">
-                        </a>
-                </li>
-            </ul>
-
-            <span class="reading-time">1 min read</span>
-
-        </footer>
-
-    </div>
-
-</article>
-
         </div>
     </div>
 </aside>
@@ -377,16 +281,16 @@ To be honest, we couldn't find a micro-control">
         </a>
     </div>
     <span class="floating-header-divider">—</span>
-    <div class="floating-header-title">STM32 - Brain of PICCOLA (micromouse part 01)</div>
+    <div class="floating-header-title">Multiple VL6180X(Pololu) with Arduino</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=STM32%20-%20Brain%20of%20PICCOLA%20(micromouse%20part%2001)&amp;url=http://localhost:2368/stm32-brain-of-the-mouse-micromouse-part-01/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Multiple%20VL6180X(Pololu)%20with%20Arduino&amp;url=http://localhost:2368/multiple-vl6180x-with-arduino/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/stm32-brain-of-the-mouse-micromouse-part-01/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/multiple-vl6180x-with-arduino/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
         </a>
     </div>
